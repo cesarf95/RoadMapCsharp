@@ -1,0 +1,24 @@
+📝 Cheat Sheet Completa – List<T> em C#
+
+Comando	O que faz	Exemplo:
+
+List<T> lista = new List<T>();	Cria uma lista vazia que vai guardar elementos do tipo T.	List<string> nomes = new List<string>();
+lista.Add(item);	Adiciona um elemento no final da lista.	nomes.Add("Ana");
+lista.Remove(item);	Remove o primeiro elemento igual ao informado.	nomes.Remove("Ana");
+lista.RemoveAt(indice);	Remove o elemento na posição específica.	nomes.RemoveAt(0);
+lista.Contains(item);	Verifica se o elemento existe na lista. Retorna true ou false.	if(nomes.Contains("Ana")) Console.WriteLine("Existe!");
+lista.IndexOf(item);	Retorna o índice da primeira ocorrência do elemento. Retorna -1 se não existir.	int i = nomes.IndexOf("Bruno");
+lista.Count;	Retorna o número de elementos na lista.	int total = nomes.Count;
+lista.Clear();	Remove todos os elementos da lista, deixando-a vazia.	nomes.Clear();
+lista.Sort();	Ordena os elementos em ordem crescente (alfabética ou numérica).	nomes.Sort();
+lista.Reverse();	Inverte a ordem dos elementos da lista.	nomes.Reverse();
+lista.Insert(indice, item);	Insere um elemento em uma posição específica, empurrando os demais para frente.	nomes.Insert(1, "Carlos");
+lista.ToArray();	Converte a lista em um array tradicional do C#.	string[] arrayNomes = nomes.ToArray();
+lista.TrimExcess();	Reduz a capacidade interna da lista para o tamanho atual, economizando memória.	nomes.TrimExcess();
+lista.Find(condição);	Retorna o primeiro elemento que satisfaça a condição.	string nome = nomes.Find(n => n.StartsWith("A"));
+lista.FindAll(condição);	Retorna uma lista com todos os elementos que satisfaçam a condição.	List<string> aNomes = nomes.FindAll(n => n.StartsWith("A"));
+lista.ForEach(ação);	Executa uma ação para cada elemento da lista.	nomes.ForEach(n => Console.WriteLine(n));
+lista.Exists(condição);	Retorna true se algum elemento satisfaz a condição.	bool temA = nomes.Exists(n => n.StartsWith("A"));
+lista.RemoveAll(condição);	Remove todos os elementos que satisfaçam a condição.	nomes.RemoveAll(n => n.StartsWith("B"));
+lista.ConvertAll(conversão);	Converte todos os elementos para outro tipo, retornando uma nova lista.	List<int> tamanhos = nomes.ConvertAll(n => n.Length);
+lista.BinarySearch(item);	Procura o item em uma lista ordenada e retorna o índice. Retorna negativo se não encontrar.	int i = nomes.BinarySearch("Ana");
