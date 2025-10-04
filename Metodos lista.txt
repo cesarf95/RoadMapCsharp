@@ -1,0 +1,45 @@
+| Método                      | O que faz                                             | Exemplo                                                          |
+| --------------------------- | ----------------------------------------------------- | ---------------------------------------------------------------- |
+| **`.Add(item)`**            | Adiciona um item **no final da lista**                | `compras.Add("Banana");` → adiciona `"Banana"` no fim            |
+| **`.Remove(item)`**         | Remove a **primeira ocorrência** do item especificado | `compras.Remove("Ovos");` → remove `"Ovos"` da lista             |
+| **`.RemoveAt(indice)`**     | Remove o item no índice informado                     | `compras.RemoveAt(2);` → remove o 3º item (índice começa em 0)   |
+| **`.Insert(indice, item)`** | Insere um item no índice especificado                 | `compras.Insert(1, "Leite");` → adiciona `"Leite"` na 2ª posição |
+| **`.Count`**                | Retorna a quantidade de elementos na lista            | `int total = compras.Count;`                                     |
+| **`.IndexOf(item)`**        | Retorna o índice da **primeira ocorrência** do item   | `int pos = compras.IndexOf("Pão");`                              |
+| **`.Contains(item)`**       | Verifica se a lista contém o item (true/false)        | `bool existe = compras.Contains("Arroz");`                       |
+| **`.Clear()`**              | Remove todos os elementos da lista                    | `compras.Clear();` → lista fica vazia                            |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+| Método                      | O que faz                                                                       | Exemplo                                                                               |
+| --------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| **`.Add(item)`**            | Adiciona um item **no final da lista**                                          | `compras.Add("Banana");` → adiciona `"Banana"` no fim                                 |
+| **`.Remove(item)`**         | Remove a **primeira ocorrência** do item especificado                           | `compras.Remove("Ovos");` → remove `"Ovos"` da lista                                  |
+| **`.RemoveAt(indice)`**     | Remove o item no índice informado                                               | `compras.RemoveAt(2);` → remove o 3º item (índice começa em 0)                        |
+| **`.Insert(indice, item)`** | Insere um item no índice especificado                                           | `compras.Insert(1, "Leite");` → adiciona `"Leite"` na 2ª posição                      |
+| **`.Count`**                | Retorna a quantidade de elementos na lista                                      | `int total = compras.Count;`                                                          |
+| **`.IndexOf(item)`**        | Retorna o índice da **primeira ocorrência** do item; se não existir, retorna -1 | `int pos = compras.IndexOf("Pão");` → retorna 1 (índice do item) ou -1 se não existir |
+| **`.Contains(item)`**       | Verifica se a lista contém o item (true/false)                                  | `bool existe = compras.Contains("Arroz");`                                            |
+| **`.Clear()`**              | Remove todos os elementos da lista                                              | `compras.Clear();` → lista fica vazia                                                 |
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+| Método                      | O que faz                                                                       | Exemplos                                                                                                           |
+| --------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| **`.Add(item)`**            | Adiciona um item **no final da lista**                                          | `List<string> frutas = new List<string>(); frutas.Add("Banana");` → adiciona `"Banana"` no fim da lista            |
+| **`.Remove(item)`**         | Remove a **primeira ocorrência** do item especificado                           | `List<int> numeros = new List<int>{1,2,3}; numeros.Remove(2);` → remove o valor `2`                                |
+| **`.RemoveAt(indice)`**     | Remove o item no índice informado                                               | `List<string> cores = new List<string>{"Vermelho","Verde","Azul"}; cores.RemoveAt(1);` → remove `"Verde"`          |
+| **`.Insert(indice, item)`** | Insere um item no índice especificado                                           | `List<string> compras = new List<string>{"Leite","Ovos"}; compras.Insert(1,"Pão");` → insere `"Pão"` na 2ª posição |
+| **`.Count`**                | Retorna a quantidade de elementos na lista                                      | `List<int> numeros = new List<int>{1,2,3}; int total = numeros.Count;` → `total = 3`                               |
+| **`.IndexOf(item)`**        | Retorna o índice da **primeira ocorrência** do item; se não existir, retorna -1 | `List<string> frutas = new List<string>{"Maçã","Banana"}; int pos = frutas.IndexOf("Banana");` → `pos = 1`         |
+| **`.Contains(item)`**       | Verifica se a lista contém o item (true/false)                                  | `List<int> numeros = new List<int>{1,2,3}; bool existe = numeros.Contains(2);` → `true`                            |
+| **`.Clear()`**              | Remove todos os elementos da lista                                              | `List<string> cores = new List<string>{"Vermelho","Azul"}; cores.Clear();` → lista fica vazia                      |
+| **`.AddRange(lista)`**      | Adiciona todos os elementos de outra lista                                      | `List<int> a = new List<int>{1,2}; List<int> b = new List<int>{3,4}; a.AddRange(b);` → `a = {1,2,3,4}`             |
+| **`.RemoveAll(condição)`**  | Remove todos os elementos que satisfazem uma condição                           | `List<int> nums = new List<int>{1,2,3,4}; nums.RemoveAll(n => n%2==0);` → remove todos os pares → `nums={1,3}`     |
+| **`.Reverse()`**            | Inverte a ordem dos elementos                                                   | `List<int> nums = new List<int>{1,2,3}; nums.Reverse();` → `nums = {3,2,1}`                                        |
+| **`.Sort()`**               | Ordena os elementos da lista (crescente por padrão)                             | `List<int> nums = new List<int>{3,1,2}; nums.Sort();` → `nums = {1,2,3}`                                           |
+| **`.ToArray()`**            | Converte a lista para um array                                                  | `List<int> nums = new List<int>{1,2,3}; int[] arr = nums.ToArray();`                                               |
+| **`.Find(condição)`**       | Retorna o **primeiro elemento** que satisfaz a condição                         | `List<int> nums = new List<int>{1,2,3,4}; int par = nums.Find(n => n%2==0);` → `par = 2`                           |
+| **`.FindAll(condição)`**    | Retorna **todos os elementos** que satisfazem a condição                        | `List<int> nums = new List<int>{1,2,3,4}; var pares = nums.FindAll(n => n%2==0);` → `{2,4}`                        |
+| **`.ForEach(ação)`**        | Executa uma ação para cada elemento da lista                                    | `List<string> frutas = new List<string>{"Maçã","Banana"}; frutas.ForEach(f => Console.WriteLine(f));`              |
+| **`List<List<T>>`**         | Lista de listas (listas aninhadas)                                              | `List<List<int>> matriz = new List<List<int>>{ new List<int>{1,2}, new List<int>{3,4} };`                          |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
