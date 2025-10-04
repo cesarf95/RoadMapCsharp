@@ -22,3 +22,5 @@ lista.Exists(condição);	Retorna true se algum elemento satisfaz a condição.	
 lista.RemoveAll(condição);	Remove todos os elementos que satisfaçam a condição.	nomes.RemoveAll(n => n.StartsWith("B"));
 lista.ConvertAll(conversão);	Converte todos os elementos para outro tipo, retornando uma nova lista.	List<int> tamanhos = nomes.ConvertAll(n => n.Length);
 lista.BinarySearch(item);	Procura o item em uma lista ordenada e retorna o índice. Retorna negativo se não encontrar.	int i = nomes.BinarySearch("Ana");
+
+
